@@ -8,20 +8,22 @@ body {
     background-color: #fff;
     padding: 10px;
     
+    
 }
 
 .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
+    max-width: 1512px;
     margin: 0 auto;
        
 }
 
 .meetup-navbar img {
     height: 34px;
-    width: auto;
+    width: 95px;
+    margin-right: 40px;
 
 }
 
@@ -29,8 +31,8 @@ body {
     display: flex;
     align-items: center;
     gap: 0px;
-    width: 600px;
-    padding-right: 200px;
+    width: 750px;
+    margin-right: 470px;
    
     
 }
@@ -42,9 +44,10 @@ body {
     border: 1px solid #ddd;
     border-radius: 6px;
     padding: 0 12px;
-    height: 30px;
+    height: 42px;
     flex: 1;
     flex-grow: 1;
+    width: 300px;
     
 }
 .location-box {
@@ -54,8 +57,9 @@ body {
     border: 1px solid #ddd;
     border-radius: 6px;
     max-width: 600px;
-    height: 30px;
+    height: 42px;
     padding: 0 15px;
+    width: 300px;
 }
 
 .search-box img, .search-button img {
@@ -68,16 +72,15 @@ body {
     border: none;
     outline: none;
     width: 100%;
-    font-size: 13px;
+    font-size: 16px;
     position: relative;
 }
 .location-input {
     border: none;
     outline: none;
     width: 100%;
-    font-size: 13px;
+    font-size: 16px;
     position: relative;
-   font-size: 14px;
 }
 
 .search-button {
@@ -92,7 +95,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30px;
+    width: 42px;
     border: none;
     right: 0;
     top: 0;
@@ -110,8 +113,6 @@ body {
     margin-right: 10px;
     width: 20px;
     height: 20px;
-
-    
 }
 
 .user-actions {
@@ -125,7 +126,6 @@ body {
     align-items: center;
     font-size: 14px;
     cursor: pointer;
-    height: 100%;
 }
 
 .auth-buttons {
@@ -134,12 +134,13 @@ body {
 }
 
 .login-btn{
-    padding: 8px 16px;
+    padding: 8px 12px;
     border: none;
     font-size: 14px;
     cursor: pointer;
     transition: all 0.3s ease;
     background: none;
+    min-width: 72px;
     
 
 }
@@ -152,6 +153,7 @@ body {
     transition: all 0.3s ease;
     color: white;
     border: none;
+    min-width: 83px;
     
 }
 
@@ -162,19 +164,24 @@ body {
 
 
 .signup-btn:hover {
-    background-color: #e04a4a;
+    background-color: #141313;
 }
 @media (max-width: 768px) {
     .container {
         flex-wrap: wrap;
         padding: 10px;
+        gap: 15px;
     }
     
     .search-container {
-        order: 3;
+        order: 2;
         width: 100%;
-        margin-top: 10px;
-        padding-right: 0;
+        margin: 10px 0;
+        margin-right: 0;
+    }
+    
+    .meetup-navbar {
+        margin-right: 0;
     }
     
     .user-actions {
@@ -183,10 +190,6 @@ body {
 }
 
 @media (max-width: 480px) {
-    .meetup-navbar img {
-        height: 28px;
-    }
-    
     .search-container {
         flex-direction: column;
         gap: 8px;
@@ -197,12 +200,9 @@ body {
         width: 100%;
     }
     
-    .user-actions {
-        gap: 10px;
-    }
-    
-    .language-selector span {
-        display: none;
+    .meetup-navbar img {
+        height: 28px;
+        width: 80px;
     }
     
     .auth-buttons {
@@ -219,10 +219,25 @@ body {
 @media (max-width: 390px) {
     .container {
         padding: 8px;
+        gap: 10px;
     }
     
     .meetup-navbar img {
         height: 24px;
+        width: 70px;
+    }
+    
+    .search-box,
+    .location-box {
+        height: 36px;
+    }
+    
+    .user-actions {
+        gap: 10px;
+    }
+    
+    .language-selector span {
+        display: none;
     }
     
     .welt-icon {
@@ -238,4 +253,231 @@ body {
         padding: 5px 8px;
         font-size: 11px;
     }
+    
+    .search-button {
+        width: 36px;
+    }
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Hero Section */
+.hero {
+    padding: 100px 0;
+}
+
+.people-platform {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Главный контейнер с двумя внутренними в ряд */
+.container-people {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-left: -18px;
+}
+
+/* Первый внутренний контейнер (текст) */
+.text-container {
+    flex: 1;
+    max-width: 700px;
+    
+    
+}
+
+/* Второй внутренний контейнер (изображение) */
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Стили текста */
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #333;
+    margin-bottom: 20px;
+    margin-top: -20px;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #0a0404;
+    margin-bottom: 30px;
+    max-width: 650px;
+}
+
+
+
+
+.join-button {
+    background-color:rgba(0, 121, 138, 1) ;
+    min-width: 95px;
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.join-button:hover {
+    background-color: #070707;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+.image-container img {
+    min-width: 380px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+
+@media (max-width: 1024px) {
+    .container-people {
+        gap: 40px;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 0;
+    }
+    
+    .container-people {
+        flex-direction: column;
+    }
+    
+    .text-container {
+        max-width: 100%;
+        text-align: center;
+    }
+    
+    .image-container {
+        justify-content: center;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .join-button {
+        padding: 12px 24px;
+        font-size: 1rem;
+        margin: 0 auto;
+    }
+}
+
+
+
+/* block with bild */
+.events-grid-container {
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .events-header {
+    margin-bottom: 30px;
+  }
+  
+  .events-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+  }
+  
+  .events-header p {
+    font-size: 18px;
+    color: #666;
+    margin: 0;
+  }
+  
+  
+  .events-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: auto auto; 
+    gap: 20px;
+  }
+  
+  .event-image{
+    min-width: 272px;
+    width: 100%;
+    height:153px;
+
+
+  }
+
+  .event-card {
+    padding-bottom:56px ;
+    padding-right: 20px
+    
+    
+  }
+  
+  .event-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+  }
+  
+  .category {
+    font-size: 14px;
+    color: #666;
+    margin: 0 0 12px 0;
+  }
+  
+  .date-time {
+    font-size: 14px;
+    color: #666;
+    margin: 0 0 16px 0;
+  }
+  
+  .event-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    border-top: 1px solid #f0f0f0;
+  }
+  
+  .attendees {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .price {
+    font-size: 14px;
+    color: rgba(33, 33, 33, 1);
+    font-weight: 600;}
