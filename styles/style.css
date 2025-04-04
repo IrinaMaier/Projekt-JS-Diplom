@@ -2,13 +2,12 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    min-width: 1200px;
 }
 
 .navbar {
-    background-color: #fff;
-    padding: 10px;
-    
-    
+    background-color: #ffffff;
+    padding: 10px 0;
 }
 
 .container {
@@ -17,11 +16,12 @@ body {
     align-items: center;
     max-width: 1512px;
     margin: 0 auto;
-       
+    padding: 0 20px;
 }
 
 .meetup-navbar img {
     height: 34px;
+    width: auto;
     width: 95px;
     margin-right: 40px;
 
@@ -30,11 +30,9 @@ body {
 .search-container {
     display: flex;
     align-items: center;
-    gap: 0px;
-    width: 750px;
+    max-width:600px;
     margin-right: 470px;
-   
-    
+
 }
 
 
@@ -45,20 +43,17 @@ body {
     border-radius: 6px;
     padding: 0 12px;
     height: 42px;
-    flex: 1;
-    flex-grow: 1;
     width: 300px;
-    
 }
+
 .location-box {
-    display: flex;
-    flex: 1;
     position: relative;
+    display: flex;
+    align-items: center;
     border: 1px solid #ddd;
     border-radius: 6px;
-    max-width: 600px;
     height: 42px;
-    padding: 0 15px;
+    padding: 0 20px;
     width: 300px;
 }
 
@@ -69,18 +64,20 @@ body {
 }
 
 .search-input {
+    position: relative;
     border: none;
     outline: none;
     width: 100%;
     font-size: 16px;
-    position: relative;
+    
 }
 .location-input {
+    position: relative;
     border: none;
     outline: none;
     width: 100%;
     font-size: 16px;
-    position: relative;
+    
 }
 
 .search-button {
@@ -88,20 +85,15 @@ body {
     background-color: #f65858;
     border: none;
     border-radius: 0 4px 4px 0;
-    padding: 0;
+    padding: 0 12px;
     margin: 0;
-    height: 100%;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 42px;
-    border: none;
+    height: 42px;
     right: 0;
     top: 0;
-    height: 100%;
-   
-   
 }
 
 .search-button img {
@@ -119,6 +111,7 @@ body {
     display: flex;
     align-items: center;
     gap: 20px;
+    cursor: pointer;
 }
 
 .language-selector  {
@@ -166,16 +159,21 @@ body {
 .signup-btn:hover {
     background-color: #141313;
 }
+
+
 @media (max-width: 768px) {
     .container {
         flex-wrap: wrap;
         padding: 10px;
         gap: 15px;
     }
-    
+
     .search-container {
+        order: 3;
         order: 2;
         width: 100%;
+        margin-top: 10px;
+        padding-right: 0;
         margin: 10px 0;
         margin-right: 0;
     }
@@ -183,32 +181,42 @@ body {
     .meetup-navbar {
         margin-right: 0;
     }
-    
+
     .user-actions {
         margin-left: auto;
     }
 }
 
 @media (max-width: 480px) {
+    .meetup-navbar img {
+        height: 28px;
+    }
+    
     .search-container {
         flex-direction: column;
         gap: 8px;
     }
-    
+
     .search-box,
     .location-box {
         width: 100%;
     }
+
+    .user-actions {
+        gap: 10px;
+    }
     
+    .language-selector span {
+        display: none;
     .meetup-navbar img {
         height: 28px;
         width: 80px;
     }
-    
+
     .auth-buttons {
         gap: 8px;
     }
-    
+
     .login-btn,
     .signup-btn {
         padding: 6px 12px;
@@ -221,7 +229,7 @@ body {
         padding: 8px;
         gap: 10px;
     }
-    
+
     .meetup-navbar img {
         height: 24px;
         width: 70px;
@@ -239,36 +247,32 @@ body {
     .language-selector span {
         display: none;
     }
-    
+
     .welt-icon {
         margin-right: 5px;
     }
-    
+
     .auth-buttons {
         gap: 5px;
     }
-    
+
     .login-btn,
     .signup-btn {
         padding: 5px 8px;
         font-size: 11px;
     }
+}
     
     .search-button {
         width: 36px;
     }
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
-}
-
-/* Hero Section */
+/* начало маин */
 .hero {
-    padding: 100px 0;
+    margin: 0 auto;
+    padding: 100px 0 150px;
+    background: white;
 }
 
 .people-platform {
@@ -277,37 +281,42 @@ body {
     padding: 0 20px;
 }
 
-/* Главный контейнер с двумя внутренними в ряд */
+
 .container-people {
+    min-width: 1200px;
+    margin:0 auto;
+    z-index: 2;
     display: flex;
     align-items: center;
-    gap: 60px;
-    margin-left: -18px;
+    margin-top: 00px;
+    gap: 40px;
+    align-items: flex-start;
+    text-align: left;
+    
+   
 }
 
-/* Первый внутренний контейнер (текст) */
-.text-container {
-    flex: 1;
-    max-width: 700px;
-    
+
+.text-container h1 {
+    margin-right: 100px;
     
 }
 
-/* Второй внутренний контейнер (изображение) */
 .image-container {
     flex: 1;
     display: flex;
     justify-content: flex-end;
 }
 
-/* Стили текста */
+
 .hero-title {
     font-size: 2.5rem;
-    font-weight: bold;
     line-height: 1.2;
-    color: #333;
-    margin-bottom: 20px;
-    margin-top: -20px;
+    margin-top: -20px 0 ;
+    margin-left: 0;
+    padding-left: 0;
+   
+   
 }
 
 .hero-description {
@@ -347,80 +356,154 @@ body {
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    
 }
 
 
 @media (max-width: 1024px) {
     .container-people {
-        gap: 40px;
+        gap: 30px;
     }
     
     .hero-title {
-        font-size: 2.2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero {
-        padding: 60px 0;
-    }
-    
-    .container-people {
-        flex-direction: column;
-    }
-    
-    .text-container {
-        max-width: 100%;
-        text-align: center;
-    }
-    
-    .image-container {
-        justify-content: center;
-        margin-top: 30px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-title {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
     
     .hero-description {
         font-size: 1rem;
     }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .search-container {
+        flex-direction: column;
+        margin: 10px 0;
+        max-width: 100%;
+    }
+    
+    .container-people {
+        flex-direction: column;
+        padding: 30px;
+    }
+    
+    .text-container {
+        order: 1;
+        text-align: center;
+    }
+    
+    .image-container {
+        order: 2;
+        margin-top: 30px;
+    }
+    
+    .hero-title, .hero-description {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 60px 0;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+    }
     
     .join-button {
         padding: 12px 24px;
         font-size: 1rem;
-        margin: 0 auto;
+    }
+    
+    .user-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .language-selector span {
+        display: none;
     }
 }
 
 
 
+
 /* block with bild */
 .events-grid-container {
+    position: relative;
+    z-index: 1;
+    margin-top: 500px;
     font-family: 'Segoe UI', Roboto, sans-serif;
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: 100px auto 0;
+    padding: 0 20px;
+   
   }
   
   .events-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 30px;
+    width: 100%;
   }
-  
-  .events-header h2 {
-    font-size: 24px;
+ 
+  .header-group {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .events-title {
+    font-size: 28px;
     font-weight: 600;
-    margin: 0 0 5px 0;
+    color: #060606;
+    margin: 0;
+    padding: 0;
+  }
+
+  .location-info {
+    display: flex;
+    align-items: center;
+    width: 240px;
+    height: 44px;
+    gap: 25px;
+    background-color: rgba(65, 142, 152, 0.12);
+    border-radius: 5px;
+    padding-left: 40px;
+    
+
+}
+  .location{
+    font-size:24px;
+    color: #333;
+
+    font-weight: 700;
+  }
+  .see-all-link {
+    font-size: 16px;
+    color:rgba(0, 121, 138, 1);
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .see-all-link:hover {
+    text-decoration: underline;
   }
   
   .events-header p {
-    font-size: 18px;
-    color: #666;
-    margin: 0;
+  
+    font-size: 17px;
+    color:rgba(0, 121, 138, 1);;
+    display: flex;
+  align-items: center
   }
+ 
   
   
   .events-grid {
@@ -460,7 +543,7 @@ body {
   
   .date-time {
     font-size: 14px;
-    color: #666;
+    color: rgba(112, 112, 112, 1);
     margin: 0 0 16px 0;
   }
   
@@ -474,10 +557,207 @@ body {
   
   .attendees {
     font-size: 14px;
-    color: #666;
+    color: #040404;
   }
   
   .price {
     font-size: 14px;
     color: rgba(33, 33, 33, 1);
     font-weight: 600;}
+/* 
+    послдение 4 картинки */
+    .upcoming{
+        font-size: 28px;
+        font-family: Arial, sans-serif;
+    }
+
+   
+
+    .Upcoming-container{
+        display: flex;
+        align-items: center;
+        gap: 760px;
+        margin-bottom: 25px;
+        margin-top: 40px;
+    }
+
+/* див с кнопкой sign-up */
+
+    .Join-Meetup{
+        width: 1200px;
+        border-radius: 12px;
+        margin: 0 auto;
+        background:rgba(151, 202, 209, 0.08);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 40px 20px;
+    }
+   .text-join{
+    flex: 1;
+    max-width: 700px;
+    
+   }
+    h1{
+        font-size: 28px;
+        font-weight: bold;
+        
+        margin-left: 56px;
+        color:rgba(33, 33, 33, 1);
+    }
+    .descriptions{
+        font-size: 18px;
+        margin-left: 56px;
+        margin-bottom: 30px;
+       
+    }
+    .sign-up {
+    background-color: rgba(227, 35, 89, 1);
+    width: 192px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-left: 56px;
+    margin-bottom:36px ;
+    }
+    .sign-up:hover {
+        background-color: #0c0c0c;
+    }
+    
+    .image-content {
+        padding-right: 56px;
+    }
+    
+    .image-content img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    /* 8 карточек */
+
+    .explore-section {
+        width: 1200px;
+        margin: 0;
+        padding-right: 17px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+     span{
+    font-size: 16px;
+    line-height: 1.5;
+    color: #080707;
+    margin-bottom: 20px;
+    max-width: 500px;
+    }
+
+    .explore-section h1 {
+        font-size: 28px;
+        font-weight: 600;
+        color: #333;
+        text-align: left;
+        margin: 64px 0 20px 0;
+        width: 100%;
+        padding: 0; 
+        padding-bottom: 25px;
+        padding-top: 40x;
+      
+    }
+    
+    .game-card {
+        display: flex;
+        justify-content: space-between;
+        gap: 19px;
+        width: 100%;
+
+    }
+    
+    .cards {
+        flex: 0 0 auto;
+        width: calc(12.5% - 9px);
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 10px;
+        border-radius: 8px;
+        background-color:rgba(151, 202, 209, 0.08);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        
+    }
+    
+    .cards:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
+    
+    .cards img {
+        width: 20px;
+        height: 20px;
+        margin-bottom: 12px;
+        object-fit: contain;
+    }
+    
+    .cards span {
+        font-size: 14px;
+        font-weight:500;
+        color:rgba(33, 33, 33, 1);
+        text-align: center;
+        line-height: 1.3;
+    }
+    /* 5 городов */
+    
+    .container-popular {
+        max-width: 1200px;
+        margin: 65px auto;
+        
+        
+    }
+    .container-popular h1{
+        font-size: 28px;
+        font-weight: 600;
+        max-width: 340px;
+        margin: 0 50px 0 0;
+
+    }
+    .container-popular p {
+        font-size: 16px;
+        color: rgba(112, 112, 112, 1);
+        line-height: 1.5;
+        max-width: 830px;
+        margin: 16px auto 28px 0;
+    }
+    .citys {
+        display: flex;
+        gap: 55px;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .city:hover img {
+        transform: scale(1.05);
+    }
+
+    .city span {
+        font-size:20px ;
+        font-weight: 600;
+        text-align: center;
+        
+    }
+    .city {
+        display: flex;
+        flex-direction: column;  
+        align-items: center;     
+        text-align: center;      
+        width: 205px;   
+        margin-top: 15px;        
+      }
+      .city img {
+        margin-bottom: 25px;  
+      }
