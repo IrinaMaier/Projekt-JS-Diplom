@@ -1,7 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
     min-width: 1200px;
 }
 
@@ -32,6 +39,7 @@ body {
     align-items: center;
     max-width:600px;
     margin-right: 470px;
+    margin-left: 15px;
 
 }
 
@@ -69,7 +77,7 @@ body {
     outline: none;
     width: 100%;
     font-size: 16px;
-    
+    padding-left: 10px;
 }
 .location-input {
     position: relative;
@@ -78,6 +86,7 @@ body {
     width: 100%;
     font-size: 16px;
     
+    
 }
 
 .search-button {
@@ -85,26 +94,22 @@ body {
     background-color: #f65858;
     border: none;
     border-radius: 0 4px 4px 0;
-    padding: 0 12px;
+    padding: 0 10px ;
     margin: 0;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 42px;
+    width: 42px;
     right: 0;
-    top: 0;
+    
 }
 
 .search-button img {
     width: 16px;
     height: 16px;
 
-}
-.welt-icon {
-    margin-right: 10px;
-    width: 20px;
-    height: 20px;
 }
 
 .user-actions {
@@ -114,12 +119,21 @@ body {
     cursor: pointer;
 }
 
-.language-selector  {
+    
+.language-selector{
     display: flex;
     align-items: center;
+    gap: 10px;
+   
+}
+   
+.language-selector span {
     font-size: 14px;
     cursor: pointer;
+    margin-top: 20px;
+   
 }
+
 
 .auth-buttons {
     display: flex;
@@ -160,113 +174,122 @@ body {
     background-color: #141313;
 }
 
-
-@media (max-width: 768px) {
-    .container {
-        flex-wrap: wrap;
-        padding: 10px;
-        gap: 15px;
-    }
-
-    .search-container {
-        order: 3;
-        order: 2;
-        width: 100%;
-        margin-top: 10px;
-        padding-right: 0;
-        margin: 10px 0;
-        margin-right: 0;
-    }
-    
-    .meetup-navbar {
-        margin-right: 0;
-    }
-
-    .user-actions {
-        margin-left: auto;
-    }
+.see-all-events{
+    font-size: 16px;
+    color: rgba(0, 121, 138, 1);
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+    margin-left: 650px; /* Это вытолкнет ссылку вправо */
+    padding-right: 0; /* Добавим отступ справа */
 }
-
-@media (max-width: 480px) {
-    .meetup-navbar img {
-        height: 28px;
-    }
-    
-    .search-container {
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .search-box,
-    .location-box {
-        width: 100%;
-    }
-
-    .user-actions {
-        gap: 10px;
-    }
-    
-    .language-selector span {
-        display: none;
-    .meetup-navbar img {
-        height: 28px;
-        width: 80px;
-    }
-
-    .auth-buttons {
-        gap: 8px;
-    }
-
-    .login-btn,
-    .signup-btn {
-        padding: 6px 12px;
-        font-size: 12px;
-    }
-}
-
 @media (max-width: 390px) {
+    body {
+      min-width: auto;
+      padding: 10px;
+    }
+  
     .container {
-        padding: 8px;
-        gap: 10px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 0 10px;
     }
-
+  
     .meetup-navbar img {
-        height: 24px;
-        width: 70px;
+      width: 80px;
+      margin-right: 0;
     }
-    
+  
+    .search-container {
+      flex-direction: column;
+      align-items: stretch;
+      margin: 0;
+      gap: 10px;
+      max-width: 100%;
+    }
+  
     .search-box,
     .location-box {
-        height: 36px;
+      width: 100%;
     }
-    
+  
     .user-actions {
-        gap: 10px;
+      flex-direction: column;
+      align-items: stretch;
+      width: 100%;
+      gap: 10px;
     }
-    
+  
+    .language-selector {
+      justify-content: space-between;
+      margin-top: 0;
+    }
+  
     .language-selector span {
-        display: none;
+      margin-top: 0;
+      line-height: 1.2;
     }
-
-    .welt-icon {
-        margin-right: 5px;
-    }
-
+  
     .auth-buttons {
-        gap: 5px;
+      flex-direction: column;
+      width: 100%;
     }
-
+  
     .login-btn,
     .signup-btn {
-        padding: 5px 8px;
-        font-size: 11px;
+      width: 100%;
     }
-}
-    
-    .search-button {
-        width: 36px;
+  }
+  
+  /* 📱 Стандартные смартфоны: до 480px */
+  @media (max-width: 480px) {
+    .search-container {
+      margin-right: 0;
     }
-}
+  }
+  
+  /* 📱 Планшеты: до 768px */
+  @media (max-width: 768px) {
+    .container {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+  
+    .search-container {
+      margin-right: 0;
+    }
+  }
+  
+  /* 💻 Небольшие ноутбуки: до 1024px */
+  @media (max-width: 1024px) {
+    .search-container {
+      margin-right: 0;
+    }
+  }
+  
+  /* 🖥 Десктоп: до 1280px */
+  @media (max-width: 1280px) {
+    .container {
+      padding: 0 15px;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* начало маин */
 .hero {
@@ -358,7 +381,19 @@ body {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     
 }
+.see-all-link{
+    font-size: 16px;
+    color: rgba(0, 121, 138, 1);
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+    margin-left: 40px; /* Это вытолкнет ссылку вправо */
+    padding-right: 0; /* Добавим отступ справа */
 
+}
+.all-link:hover {
+    text-decoration: underline;
+  }
 
 @media (max-width: 1024px) {
     .container-people {
@@ -450,13 +485,18 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
+    max-width: 1200px;
     width: 100%;
   }
  
   .header-group {
+   
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     gap: 30px;
+
+   
   }
 
   .events-title {
@@ -465,6 +505,8 @@ body {
     color: #060606;
     margin: 0;
     padding: 0;
+
+    white-space: nowrap;
   }
 
   .location-info {
@@ -479,29 +521,17 @@ body {
     
 
 }
-  .location{
-    font-size:24px;
-    color: #333;
-
-    font-weight: 700;
-  }
-  .see-all-link {
-    font-size: 16px;
-    color:rgba(0, 121, 138, 1);
-    font-weight: 500;
-    text-decoration: none;
-    white-space: nowrap;
-  }
-  .see-all-link:hover {
-    text-decoration: underline;
-  }
+ 
+ 
+  
   
   .events-header p {
   
     font-size: 17px;
     color:rgba(0, 121, 138, 1);;
     display: flex;
-  align-items: center
+  align-items: center;
+  font-weight: 600;
   }
  
   
@@ -511,13 +541,15 @@ body {
     grid-template-columns: repeat(4, 1fr); 
     grid-template-rows: auto auto; 
     gap: 20px;
+
+   
   }
   
   .event-image{
     min-width: 272px;
     width: 100%;
     height:153px;
-
+    
 
   }
 
@@ -531,8 +563,9 @@ body {
   .event-card h3 {
     font-size: 16px;
     font-weight: 600;
-    margin: 0 0 8px 0;
+    margin: 8px 0 10px 0;
     line-height: 1.3;
+    
   }
   
   .category {
@@ -556,14 +589,25 @@ body {
   }
   
   .attendees {
+    display: flex;
+    gap: 10px;
     font-size: 14px;
     color: #040404;
   }
   
   .price {
+    display: flex;
+    gap: 5px;
     font-size: 14px;
     color: rgba(33, 33, 33, 1);
-    font-weight: 600;}
+    font-weight: 600;
+    margin-right: 120px;
+
+}
+.kalender{
+    display: flex;
+    gap: 10px;
+}
 /* 
     послдение 4 картинки */
     .upcoming{
@@ -575,10 +619,19 @@ body {
 
     .Upcoming-container{
         display: flex;
+        
         align-items: center;
         gap: 760px;
         margin-bottom: 25px;
         margin-top: 40px;
+
+        /* width: 100%;
+        justify-content: space-between;
+        max-width: 1200px;
+        box-sizing: border-box;
+        margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px; */
     }
 
 /* див с кнопкой sign-up */
@@ -601,7 +654,7 @@ body {
     h1{
         font-size: 28px;
         font-weight: bold;
-        
+        padding-bottom: 15px;
         margin-left: 56px;
         color:rgba(33, 33, 33, 1);
     }
@@ -735,7 +788,7 @@ body {
     }
     .citys {
         display: flex;
-        gap: 55px;
+        gap: 45px;
         align-items: center;
         margin-top: 30px;
     }
@@ -761,3 +814,300 @@ body {
       .city img {
         margin-bottom: 25px;  
       }
+
+      /* лупа со знаком плюс-контейнер */
+      
+ 
+
+      .how-meetup-container {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 ;
+        padding-bottom: 65px ;
+        
+    }
+    .how-meetup-container h1{
+        margin: 0;
+        text-align: left;
+        margin-bottom: 25px;
+        font-size: 28px;
+        font-weight: 600;
+    }
+    .discover-start {
+       
+       display: flex;
+        gap: 32px;
+        justify-content:flex-start;
+        align-items: stretch;
+        flex-wrap: wrap;
+        
+       
+    }
+    .discover-container{
+       
+        flex: 0 1 580px;
+        min-width: 0;
+        max-width: 580px;
+        display: flex;
+        align-items:  flex-start;
+        padding: 24px;
+        height: auto;
+        border-radius: 8px;
+        background-color: rgba(151, 202, 209, 0.08);
+       
+        
+       
+
+    }
+    .start-container {
+    
+        flex: 1;
+        max-width: 580px;
+        display: flex;
+        align-items:  flex-start;
+        padding-top: 24px;
+        height: auto;
+        border-radius: 8px;
+        background-color: rgba(151, 202, 209, 0.08);
+        min-width: 0;
+       
+    }
+
+    .discover-container img, 
+    .start-container img {
+    display: flex;
+    align-items: start;
+    width: 41px;
+    height: 41px;
+    padding: 32px 0 0 10px;
+}
+
+.discover-container h2, 
+.start-container h2 {
+    font-size: 20px;
+    margin-bottom: 16px;
+   
+}
+
+.discover-container p, 
+.start-container p {
+    margin-bottom: 15px;
+    line-height: 1.5;
+    font-size: 20px;
+}
+
+.discover-container a, 
+.start-container a {
+    display: inline-block;
+    color: rgba(0, 121, 138, 1);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.discover-container a:hover, 
+.start-container a:hover {
+    text-decoration: underline;
+}
+
+.icon-discover-plus{
+   flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 50px;
+    padding-right: 20px;
+}
+    
+.icon-discover-plus img {
+    width:40px;
+    height: 60px;
+}
+.text-content h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+.text-content a:hover {
+    text-decoration: underline;
+}
+/* предпослдений */
+.friendships_container h1{
+   margin: 0;
+    justify-content: flex-start;
+}
+.friendships_container p{
+    color:rgba(112, 112, 112, 1) ;
+}
+.friendships_meetup {
+    display: flex;
+    justify-content: space-between;
+    gap:30px ;
+}
+.friendships_column {
+padding: 30px 0 0 0;
+
+   
+    
+   
+    
+}
+.friendships_column p{
+color: rgba(112, 112, 112, 1);
+margin-bottom: 15px;
+font-size: 16px;
+
+}
+.friendships_column a{
+
+color:rgba(0, 121, 138, 1) ;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+}
+
+.friendships_column h2{
+margin-top: 25px;
+margin-bottom: 12px;
+font-size:25px;
+font-weight: 600px;
+
+}
+
+
+
+/* footer */
+.footer{
+    max-width: 1512px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(33, 33, 33, 1);
+        padding:30px 196px 40px 196px;
+    margin: 0 auto;
+width: 100%;
+box-sizing: border-box;
+}
+   /* margin-left: 550px;
+} */
+.footer-create{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-size: 16px;
+    color: white;
+    padding-top: 34px;
+    padding-bottom: 35px;
+
+}
+.btn-secondary{
+    display: inline-block;
+  padding: 12px 24px;
+  background-color: transparent; 
+  color: white; 
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid white; 
+  border-radius: 8px; 
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-container {
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1120px; 
+    width: 100%;
+}
+
+.footer-section {
+    width: 100%;
+    max-width: 374px;
+    height: 224px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-section h3 {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.footer-section a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+
+.footer-follow {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 1120px;
+}
+
+.footer-follow h3 {
+    color: #fff;
+    font-size: 16px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+.social-icons {
+    display: flex;
+    gap: 24px;
+}
+
+.social-icons a img {
+    width: 32px;
+    height: 32px;
+}
+
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1120px;
+}
+
+.app-links {
+    display: flex;
+    gap: 15px;
+}
+
+.app-links a img {
+    height: 40px;
+}
+
+.footer-legal {
+    text-align: left;
+    margin-top: 20px;
+    font-size: 14px;
+    max-width: 1120px;
+    width: 100%;
+    color: rgba(255, 255, 255, 1);
+}
+
+.footer-legal a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-legal a:hover {
+    text-decoration: underline;
+}
