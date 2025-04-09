@@ -7,13 +7,13 @@
     <title>Meetup Search</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1;400;1;700&display=swap" rel="stylesheet">
 <script defer src="scripts/index2.js"></script>
 </head>
 <body>
     <nav class="navbar">
         <div class="container">
-            <a href="" class="meetup-navbar"><img src="./assets/img/svg/SVG (1).png" alt="Meetup"></a>
+           <a href="index1.html" class="meetup-navbar"><img src="./assets/img/svg/SVG (1).png" alt="Meetup"></a>
 
 <div class="search-container">
     
@@ -45,8 +45,12 @@
 </nav>
 
 <main class="main">
+  <div class="main-content">
+    <div class="left-column">
     <div class="events-containerNY">
         <h1>Events near New York, NY</h1>
+        <a href="">Events</a>
+        
 
         <div class="filters">
             <select id="filter-type">
@@ -80,6 +84,23 @@
             <!-- Мероприятия будут рендериться сюда -->
           </div>
     </div>
+    
+  </div>
+  <div class="right-column">
+
+    <div class="map-widget">
+      <p>Find events near</p>
+      <h2>New York, NY</h2>
+
+      <div class="map-container">
+    <img src="/assets/img/png/map-thumbnail.png.png" alt="">
+    <button class="map-button">Browse in map
+      <img src="/assets/img/png/expandMapIcon.svg.png" alt="">
+    </button>
+  </div>
+  </div>
+  </div>
+  </div>
 </main>
 
 </body>

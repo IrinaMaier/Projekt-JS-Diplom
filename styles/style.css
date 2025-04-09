@@ -2,7 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
 }
+
 
 body {
     margin: 0;
@@ -45,6 +48,7 @@ body {
 
 
 .search-box{
+    position: relative;
     display: flex;
     align-items: center;
     border: 1px solid #ddd;
@@ -124,14 +128,18 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-   
 }
    
 .language-selector span {
     font-size: 14px;
     cursor: pointer;
-    margin-top: 20px;
-   
+    display: inline-block;
+}
+.language-selector img {
+    height: 20px;
+    width: 20px;
+    display: block;
+    object-fit: contain;
 }
 
 
@@ -173,120 +181,6 @@ body {
 .signup-btn:hover {
     background-color: #141313;
 }
-
-.see-all-events{
-    font-size: 16px;
-    color: rgba(0, 121, 138, 1);
-    font-weight: 500;
-    text-decoration: none;
-    white-space: nowrap;
-    margin-left: 650px; /* Это вытолкнет ссылку вправо */
-    padding-right: 0; /* Добавим отступ справа */
-}
-@media (max-width: 390px) {
-    body {
-      min-width: auto;
-      padding: 10px;
-    }
-  
-    .container {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 12px;
-      padding: 0 10px;
-    }
-  
-    .meetup-navbar img {
-      width: 80px;
-      margin-right: 0;
-    }
-  
-    .search-container {
-      flex-direction: column;
-      align-items: stretch;
-      margin: 0;
-      gap: 10px;
-      max-width: 100%;
-    }
-  
-    .search-box,
-    .location-box {
-      width: 100%;
-    }
-  
-    .user-actions {
-      flex-direction: column;
-      align-items: stretch;
-      width: 100%;
-      gap: 10px;
-    }
-  
-    .language-selector {
-      justify-content: space-between;
-      margin-top: 0;
-    }
-  
-    .language-selector span {
-      margin-top: 0;
-      line-height: 1.2;
-    }
-  
-    .auth-buttons {
-      flex-direction: column;
-      width: 100%;
-    }
-  
-    .login-btn,
-    .signup-btn {
-      width: 100%;
-    }
-  }
-  
-  /* 📱 Стандартные смартфоны: до 480px */
-  @media (max-width: 480px) {
-    .search-container {
-      margin-right: 0;
-    }
-  }
-  
-  /* 📱 Планшеты: до 768px */
-  @media (max-width: 768px) {
-    .container {
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-  
-    .search-container {
-      margin-right: 0;
-    }
-  }
-  
-  /* 💻 Небольшие ноутбуки: до 1024px */
-  @media (max-width: 1024px) {
-    .search-container {
-      margin-right: 0;
-    }
-  }
-  
-  /* 🖥 Десктоп: до 1280px */
-  @media (max-width: 1280px) {
-    .container {
-      padding: 0 15px;
-    }
-  }
-  
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -349,7 +243,9 @@ body {
     margin-bottom: 30px;
     max-width: 650px;
 }
-
+.hero-image{
+    padding-right: 100px;
+}
 
 
 
@@ -373,100 +269,23 @@ body {
 }
 
 
-.image-container img {
-    min-width: 380px;
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    
-}
-.see-all-link{
-    font-size: 16px;
-    color: rgba(0, 121, 138, 1);
-    font-weight: 500;
-    text-decoration: none;
-    white-space: nowrap;
-    margin-left: 40px; /* Это вытолкнет ссылку вправо */
-    padding-right: 0; /* Добавим отступ справа */
-
-}
 .all-link:hover {
     text-decoration: underline;
   }
+ 
 
-@media (max-width: 1024px) {
-    .container-people {
-        gap: 30px;
-    }
     
-    .hero-title {
-        font-size: 2rem;
-    }
-    
-    .hero-description {
-        font-size: 1rem;
-    }
-}
+   
 
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: stretch;
-    }
     
-    .search-container {
-        flex-direction: column;
-        margin: 10px 0;
-        max-width: 100%;
-    }
-    
-    .container-people {
-        flex-direction: column;
-        padding: 30px;
-    }
-    
-    .text-container {
-        order: 1;
-        text-align: center;
-    }
-    
-    .image-container {
-        order: 2;
-        margin-top: 30px;
-    }
-    
-    .hero-title, .hero-description {
-        max-width: 100%;
-    }
-}
 
-@media (max-width: 480px) {
-    .hero {
-        padding: 60px 0;
-    }
-    
-    .hero-title {
-        font-size: 1.8rem;
-    }
-    
-    .join-button {
-        padding: 12px 24px;
-        font-size: 1rem;
-    }
-    
-    .user-actions {
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-    .language-selector span {
-        display: none;
-    }
-}
+  
 
+    
 
+    
 
+    
 
 /* block with bild */
 .events-grid-container {
@@ -479,6 +298,16 @@ body {
     padding: 0 20px;
    
   }
+  .see-all-events{
+    font-size: 16px;
+    color: rgba(0, 121, 138, 1);
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+    margin-left: 650px; /* Это вытолкнет ссылку вправо */
+    padding-right: 0; /* Добавим отступ справа */
+    cursor: pointer;
+}
   
   .events-header {
     display: flex;
@@ -555,10 +384,10 @@ body {
 
   .event-card {
     padding-bottom:56px ;
-    padding-right: 20px
-    
-    
+    padding-right: 20px;
+       
   }
+
   
   .event-card h3 {
     font-size: 16px;
@@ -615,7 +444,15 @@ body {
         font-family: Arial, sans-serif;
     }
 
-   
+    .see-all-link{
+        font-size: 16px;
+        color: rgba(0, 121, 138, 1);
+        font-weight: 500;
+        text-decoration: none;
+        white-space: nowrap;
+        
+        padding-left: 40px; /* Добавим отступ справа */
+    }
 
     .Upcoming-container{
         display: flex;
@@ -693,7 +530,7 @@ body {
 
     /* 8 карточек */
 
-    .explore-section {
+     .explore-section {
         width: 1200px;
         margin: 0;
         padding-right: 17px;
@@ -701,7 +538,7 @@ body {
         box-sizing: border-box;
     }
     
-     span{
+    .city span{
     font-size: 16px;
     line-height: 1.5;
     color: #080707;
@@ -755,7 +592,7 @@ body {
         height: 20px;
         margin-bottom: 12px;
         object-fit: contain;
-    }
+    } */
     
     .cards span {
         font-size: 14px;
@@ -1111,3 +948,261 @@ box-sizing: border-box;
 .footer-legal a:hover {
     text-decoration: underline;
 }
+
+/* @media only screen and (max-width: 1200px) { */
+    /* .container {
+        padding: 0 30px;
+    }
+    
+    .search-container {
+        margin-right: 150px;
+        margin-left: 0;
+    } */
+    
+   
+    @media only screen and (max-width: 1200px) {
+        .container {
+            padding: 0 20px;
+        }
+        
+        .search-container {
+            margin-right: 150px;
+            margin-left: 0;
+        }
+        
+        .hero-title {
+            font-size: 2rem;
+            line-height: 1.2;
+        }
+        
+        .hero-description {
+            font-size: 1.1rem;
+        }
+        .top-buttons {
+            margin-right: 10px;
+        }
+        .top-btn {
+            padding: 5px 10px;
+            font-size: 13px;
+        }
+    }
+    
+    
+    
+    /* Планшеты (992px - 768px) */
+    @media only screen and (max-width: 992px) {
+        .user-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .top-buttons {
+            margin-right: 0;
+        }
+        .search-container {
+            margin-right: 50px;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .search-box,
+        .location-box {
+            width: 100%;
+            margin-left: 0;
+        }
+        
+        .container-people {
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .hero-title {
+            font-size: 1.8rem;
+            margin-right: 0;
+        }
+        .user-actions {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .top-buttons {
+            margin-right: 0;
+        }
+    }
+    
+    /* Большие мобильные (768px - 576px) */
+    @media only screen and (max-width: 768px) {
+        .container {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .meetup-navbar {
+            margin-bottom: 10px;
+        }
+        
+        .search-container {
+            width: 100%;
+            margin: 10px 0;
+        }
+        
+        .user-actions {
+            width: 100%;
+            justify-content: space-between;
+        }
+        
+        .hero-title {
+            font-size: 1.6rem;
+        }
+        
+        .hero-description {
+            font-size: 1rem;
+        }
+        .user-actions {
+            width: 100%;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .top-buttons {
+            order: 1;
+            width: auto;
+            margin-right: auto;
+        }
+        .language-selector {
+            order: 2;
+        }
+        .auth-buttons {
+            order: 3;
+            width: 100%;
+            justify-content: space-between;
+        }
+        .top-btn {
+            padding: 6px 10px;
+        }
+        
+    }
+    
+    /* Мобильные устройства (576px - 390px) */
+    @media only screen and (max-width: 576px) {
+        .container {
+            padding: 0 15px;
+        }
+        
+        .search-box,
+        .location-box {
+            padding: 0 10px;
+        }
+        
+        .search-input,
+        .location-input {
+            font-size: 14px;
+        }
+        
+        .user-actions {
+            flex-wrap: wrap;
+        }
+        
+        .auth-buttons {
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        .login-btn,
+        .signup-btn {
+            width: 48%;
+            padding: 8px 5px;
+            font-size: 12px;
+        }
+        
+        .hero {
+            padding: 30px 15px;
+        }
+        
+        .hero-title {
+            font-size: 1.4rem;
+            line-height: 1.3;
+        }
+        
+        .hero-description {
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+        
+        .join-button {
+            padding: 10px;
+            font-size: 0.9rem;
+        }
+        .top-buttons {
+            gap: 5px;
+        }
+        .top-btn {
+            padding: 5px 8px;
+            font-size: 12px;
+        }
+    }
+    
+    /* Самые маленькие мобильные (390px и меньше) */
+    @media only screen and (max-width: 390px) {
+        .container {
+            padding: 0 10px;
+        }
+        
+        .meetup-navbar img {
+            height: 28px;
+        }
+        
+        .search-box,
+        .location-box {
+            height: 38px;
+        }
+        
+        .language-selector span {
+            display: none;
+        }
+        
+        .welt-icon {
+            margin-right: 0;
+        }
+        
+        .login-btn,
+        .signup-btn {
+            width: 100%;
+            margin-bottom: 5px;
+        }
+        
+        .hero-title {
+            font-size: 1.3rem;
+        }
+        
+        .hero-description {
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+        
+        /* Сдвигаем инпуты левее */
+        .search-box {
+            padding-left: 8px;
+        }
+        
+        .search-input {
+            padding-left: 8px;
+        }
+        
+        .location-box {
+            padding-left: 8px;
+            padding-right: 15px;
+        }
+        
+        /* Делаем кнопку поиска компактнее */
+        .search-button {
+            width: 38px;
+            height: 38px;
+        }
+        .top-btn {
+            padding: 4px 6px;
+            font-size: 11px;
+        }
+        .language-selector span {
+            display: none;
+        }
+    }
