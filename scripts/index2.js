@@ -1,5 +1,7 @@
 
 
+
+
 const eventsStore = [
     {
       title: "INFJ Personality Type- Coffee Shop Meet & Greet",

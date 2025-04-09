@@ -6,6 +6,9 @@
     font-weight: 400;
     
 }
+h1, h2, h3 {
+    font-weight: 700;
+  }
 
 body {
     margin: 0;
@@ -13,9 +16,16 @@ body {
     min-width: 1200px;
 }
 
+
+
 .navbar {
+    max-width: 1512px;
+    margin: 0 auto;
     background-color: #ffffff;
     padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .container {
@@ -131,7 +141,7 @@ body {
 .language-selector span {
     font-size: 14px;
     cursor: pointer;
-    margin-top: 20px;
+    
     
    
 }
@@ -140,6 +150,7 @@ body {
 .auth-buttons {
     display: flex;
     gap: 12px;
+    
 }
 
 .login-btn{
@@ -156,7 +167,7 @@ body {
  .signup-btn {
     background-color: rgba(0, 121, 138, 1);
     padding: 8px 16px;
-    border-radius: 4px;
+    border-radius: 8px;
     font-size: 14px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -182,24 +193,56 @@ body {
     font-weight: 500;
     text-decoration: none;
     white-space: nowrap;
-    margin-left: 650px; /* Это вытолкнет ссылку вправо */
-    padding-right: 0; /* Добавим отступ справа */
+    margin-left: 650px; 
+    padding-right: 0; 
 }
 
 
 /* main  */
-.main{
-    max-width: 1000px;
-    margin: 0;
-}
-.events-containerNY{
-    max-width: 1000px;
-    margin: 0 auto;
-    padding-top: 80px;
-    padding-left: 160px;
-  }
-  .events-containerNY h1{
 
+.main{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 80px;
+  
+}
+.main-content{
+    display: flex;
+    width: 1180px; 
+    gap: 40px;
+    
+}
+
+.left-column {
+    flex: 2; /* или фикс ширину: width: 700px */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+  }
+  .right-column {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+  }
+
+.events-containerNY{
+    display: grid;
+    gap: 25px;
+    max-width: 1000px;
+    padding-top: 20px;
+    
+    
+  }
+  .page-container {
+    max-width: 1000px;     
+    margin-left: 100px;    
+    padding-top: 80px;
+  }
+  .events-containerNY a{
+    color: rgba(0, 121, 138, 1);
+    font-size: 25px;
   }
  
 .filters {
@@ -207,27 +250,60 @@ body {
     flex-wrap: wrap;
     gap: 1rem;
     margin-bottom: 2rem;
+    
   }
   
   .filters select {
     padding: 0.5rem;
     font-size: 1rem;
+    
   }
+
+  #filter-type{
+  min-width:145px ;
+  height: 50px;
+  border: none;
+  background-color:rgb(227, 232, 239);
+  border-radius: 40px;
   
+  }
+
+  #filter-distance{
+    min-width:145px ;
+    height: 50px;
+    border: none;
+    background-color:rgb(227, 232, 239);
+    border-radius: 40px;
+  }
+  #filter-category{
+    min-width:145px ;
+   height: 50px;
+    border: none;
+    background-color:rgb(227, 232, 239);
+    border-radius: 40px;
+  }
   .events-list {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+     gap: 1.5rem;
+  width: 100%;
+    
   }
   
   .event-card {
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     display: flex;
-    flex-direction: column;
-    padding: 12px;
+   flex-direction: row;
+   align-items: flex-start;
+    background: #fff;
+    overflow: hidden;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: flex-start;
+    padding: 1rem;
+    box-sizing: border-box; 
+    width: 100%;
+    gap: 15px;
+
   }
   
   .event-card img {
@@ -235,15 +311,24 @@ body {
     max-width: 160px;
     height: auto;
     border-radius: 8px;
+   margin-bottom: 12px;
+   align-self: flex-start;
+    
   }
   
   .event-info {
-    padding: 1rem;
+    padding: 0;
+   width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
   
   .event-title {
     font-size: 1.2rem;
-    font-weight: bold;
+    font-weight: 400;
+    
   }
   
   .event-meta {
@@ -253,11 +338,66 @@ body {
   }
   .event-date {
     font-size: 14px;
-    color:rgba(112, 112, 112, 1);
+    color:rgb(149, 122, 61);
+    
   }
   
   .event-meta {
     font-size: 14px;
     color: #999;
   }
+  .map-widget {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: sans-serif;
+  }
+  
+  .map-widget p {
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+  }
+  
+  .map-widget h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .map-container {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 12px;
+  }
+  
+  .map-image {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+  }
+  
+  .map-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #008294;
+    color: #008294;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 14px;
+    white-space: nowrap;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    
+  }
+  
+  .map-button:hover {
+    background-color: #f0fafa;
+  }
+
   
