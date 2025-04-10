@@ -10,12 +10,6 @@ h1, h2, h3 {
     font-weight: 700;
   }
 
-body {
-    margin: 0;
-    padding: 0;
-    min-width: 1200px;
-}
-
 
 
 .navbar {
@@ -211,11 +205,12 @@ body {
     display: flex;
     width: 1180px; 
     gap: 40px;
+    margin-bottom: 100px;
     
 }
 
 .left-column {
-    flex: 2; /* или фикс ширину: width: 700px */
+    flex: 2; 
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -399,5 +394,369 @@ body {
   .map-button:hover {
     background-color: #f0fafa;
   }
+  @media (max-width: 1280px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .search-container {
+        margin-right: 200px;
+    }
+    
+    .main-content {
+        width: 95%;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .search-container {
+        margin-right: 100px;
+    }
+    
+    .location-box {
+        width: 250px;
+    }
+    
+    .see-all-events {
+        margin-left: 400px;
+    }
+}
+
+@media (max-width: 900px) {
+    .main-content {
+        flex-direction: column;
+    }
+    
+    .right-column {
+        max-width: 100%;
+        margin-top: 40px;
+    }
+    
+    .page-container {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 0;
+    }
+    
+    .search-container {
+        flex-direction: column;
+        margin-right: 0;
+        gap: 10px;
+    }
+    
+    .search-box, 
+    .location-box {
+        width: 100%;
+    }
+    
+    .user-actions {
+        gap: 10px;
+    }
+    
+    .see-all-events {
+        margin-left: 0;
+        margin-top: 20px;
+        display: block;
+        text-align: center;
+    }
+    
+    .event-card {
+        flex-direction: column;
+    }
+    
+    .event-card img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .meetup-navbar img {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    .auth-buttons {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .login-btn, 
+    .signup-btn {
+        width: 48%;
+    }
+    
+    .filters {
+        flex-direction: column;
+    }
+    
+    #filter-type,
+    #filter-distance,
+    #filter-category {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .language-selector span {
+        display: none;
+    }
+    
+    .main {
+        padding-top: 60px;
+    }
+    
+    .events-containerNY a {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 390px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .search-button {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .map-button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+    
+    .event-title {
+        font-size: 1rem;
+    }
+    
+    .event-meta {
+        font-size: 0.8rem;
+    }
+}
+
+
+
+
+
+  .footer{
+    max-width: 1512px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(33, 33, 33, 1);
+    padding:30px 196px 40px 196px;
+    margin: 0 auto;
+width: 100%;
+box-sizing: border-box;
+}
+
+.footer-create{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    font-size: 16px;
+    color: white;
+    padding-top: 34px;
+    padding-bottom: 35px;
+
+}
+.btn-secondary{
+    display: inline-block;
+  padding: 12px 24px;
+  background-color: transparent; 
+  color: white; 
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid white; 
+  border-radius: 8px; 
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-container {
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1120px; 
+    width: 100%;
+}
+
+.footer-section {
+    width: 100%;
+    max-width: 374px;
+    height: 224px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-section h3 {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.footer-section a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+
+.footer-follow {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 1120px;
+}
+
+.footer-follow h3 {
+    color: #fff;
+    font-size: 16px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+.social-icons {
+    display: flex;
+    gap: 24px;
+}
+
+.social-icons a img {
+    width: 32px;
+    height: 32px;
+}
+
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1120px;
+}
+
+.app-links {
+    display: flex;
+    gap: 15px;
+}
+
+.app-links a img {
+    height: 40px;
+}
+
+.footer-legal {
+    text-align: left;
+    margin-top: 20px;
+    font-size: 14px;
+    max-width: 1120px;
+    width: 100%;
+    color: rgba(255, 255, 255, 1);
+}
+
+.footer-legal a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-legal a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 767px) {
+    .footer {
+        padding: 25px 15px;
+    }
+    
+    .footer-create {
+        padding: 15px 0 25px;
+        margin-bottom: 25px;
+    }
+    
+    .footer-links ul {
+        gap: 10px;
+    }
+    
+    .footer-links li {
+        flex: 0 0 100%;
+    }
+}
+@media (min-width: 601px) {
+    .footer-apps {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin: 20px 0;
+    }
+    
+    .footer-apps img {
+        height: 40px;
+        width: auto;
+        max-width: 120px; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    .footer {
+        padding: 20px 10px;
+    }
+    
+    .footer-create {
+        margin-bottom: 20px;
+    }
+    
+    .footer-links {
+        margin-bottom: 20px;
+    }
+    
+    .footer-links h4 {
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 390px) {
+    .footer {
+        padding: 15px 10px;
+    }
+    
+    .footer-create h3 {
+        margin-bottom: 12px;
+    }
+    
+    .btn-secondary {
+        padding: 8px 16px;
+    }
+    
+    .footer-links ul {
+        gap: 8px;
+    }
+    
+    .footer-copyright {
+        margin-top: 15px;
+    }
+    
+}
+
 
   
